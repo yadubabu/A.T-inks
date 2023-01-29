@@ -1,0 +1,77 @@
+.socialmedia {
+  width: 300px;
+  height: 100vh;
+  border: lightgray 2px solid;
+  border-radius: 5px;
+  background-color: lightgrey;
+  position: absolute;
+  z-index: 9;
+  margin-left: 555px;
+}
+.socialmedia ul {
+  display: flex;
+  flex-direction: column;
+}
+.socialmedia ul .cap {
+  opacity: 0.5;
+}
+.socialmedia ul > li:first-child {
+  display: flex;
+  margin-left: -30px;
+}
+.socialmedia ul > li:first-child button {
+  border: none;
+  background-color: lightgrey;
+  cursor: pointer;
+}
+.socialmedia ul > li:first-child h3 {
+  margin: 1px 5px 1px 0px;
+}
+
+.hoursofoperations {
+  width: 300px;
+  height: 100vh;
+  border: lightgray 2px solid;
+  border-radius: 5px;
+  background-color: lightgrey;
+  position: absolute;
+  z-index: 9;
+  margin-left: 555px;
+}
+
+.statement {
+  width: 300px;
+  height: 100vh;
+  border: lightgray 2px solid;
+  border-radius: 5px;
+  background-color: lightgrey;
+  position: absolute;
+  z-index: 9;
+  margin-left: 555px;
+}
+.statement ul {
+  display: flex;
+  flex-direction: column;
+}
+.statement ul .title {
+  display: flex;
+}
+.statement ul .title button {
+  border: none;
+  background-color: lightgrey;
+}
+.statement ul .box {
+  width: 180px;
+  height: 140px;
+  border-radius: 5px;
+  border: 1px black solid;
+  padding: 5px;
+  margin: 5px;
+}
+.statement ul .box div > .edit {
+  color: red;
+  margin-left: 100px;
+}
+.statement ul .box div > .del {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
