@@ -6,45 +6,6 @@
   background-color: white;
   border-radius: 3px;
 }
-.mainpart .AddContacts {
-  width: 330px;
-  height: 100%;
-  border: lightgray 2px solid;
-  border-radius: 5px;
-  background-color: white;
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  padding: 10px;
-  z-index: 9;
-  margin-left: 555px;
-}
-.mainpart .AddContacts div .save {
-  background-color: tomato;
-  color: white;
-  width: 300px;
-  height: 20px;
-  border-radius: 3px;
-}
-.mainpart .AddContacts div > button {
-  background-color: rgb(255, 223, 228);
-  color: red;
-  border: none;
-  width: 300px;
-  height: 25px;
-}
-.mainpart .AddContacts div > button span {
-  border: red solid 1px;
-  border-radius: 15px;
-  margin: 3px;
-}
-.mainpart .AddContacts div > input {
-  background-color: lightgrey;
-  border: none;
-}
-.mainpart .AddContacts .add {
-  display: flex;
-}
 .mainpart .Contacts {
   width: 330px;
   height: 100%;
@@ -113,42 +74,20 @@
   z-index: 9;
   margin-left: 555px;
 }
-.mainpart .EditAddress {
+.mainpart .Address {
   width: 300px;
   height: 100%;
   border: lightgray 2px solid;
   border-radius: 5px;
-  background-color: white;
+  background-color: lightgrey;
   position: absolute;
   display: flex;
-  flex-direction: column;
   z-index: 9;
-  padding: 30px;
   margin-left: 555px;
-}
-.mainpart .EditAddress .btn {
-  background-color: tomato;
-  color: white;
-}
-.mainpart .EditAddress input {
-  width: 300px;
-  background-color: rgb(236, 235, 235);
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
-  margin: 10px;
-}
-.mainpart .EditAddress .add {
-  display: flex;
-  margin: 10px;
-  margin-bottom: 20px;
 }
 .mainpart ul > li .info {
   display: flex;
   flex-direction: column;
-}
-.mainpart ul > li .info ul > .address {
-  padding: 20px;
 }
 .mainpart ul > li .info span {
   color: red;
@@ -162,8 +101,8 @@
   align-items: center;
 }
 .mainpart ul > li .info div > ul li {
-  width: auto;
-  height: auto;
+  width: 170px;
+  height: 150px;
   border: 2px grey solid;
   padding: 19px;
   margin: 10px 30px;

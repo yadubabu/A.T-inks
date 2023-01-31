@@ -11,6 +11,7 @@ import Mail from '@mui/icons-material/MailOutlineSharp';
 import Phone from '@mui/icons-material/Phone';
 import Popup from '../popup/Popup';
 import Delete from '@mui/icons-material/DeleteForever';
+
 import ArrowBack from '@mui/icons-material/ArrowBack';
 
 
@@ -18,7 +19,7 @@ import ArrowBack from '@mui/icons-material/ArrowBack';
 
 import './main.scss'
 
-const Main = ({email,phone,editAddress,address,addContact}) => {
+const Main = ({email,phone,editAddress,address}) => {
   const [sty,setSty]=useState('none');
   const [editaddress,setEditaddress]=useState('none');
   const [post,setPost]=useState('none');
@@ -27,24 +28,7 @@ const [fandq,setFandq]=useState('nofandq');
 const [feedback,setFeedback]=useState('nofeedback');
 const [privacy,setPrivacy]=useState('noprivacy')
 const [terms,setTerms]=useState('noprivacy');
-const [key,setKey]=useState('none');
-const [mail,setMail]=useState('');
-const [phon,setPhon]=useState('');
-const [reference,setReference]=useState({
-  dno:'',
-  street:'',
-  landmark:'',
-  city:'',
-  state:'',
-  pin:''
-});
-const changeHandler=(e)=>{
-  setReference({[e.target.name]:e.target.value})
-}
-const updateAddress=(e)=>{
-  e.preventDefault();
-  editAddress(reference);
-}
+
 const showDisplay=(id)=>{
  
   if(id==='info'){
@@ -85,36 +69,17 @@ const showDisplay=(id)=>{
   }
   
 }
-const addMore=(e)=>{
-if(mail !== ''){
-  addContact({[e.target.name]:mail})
-}else if(phon !== ''){
-  addContact({[e.target.name]:phon})
-}
-}
+
   return (
     <div className='mainpart'>
-      <div className={`${key}`}>
-        <div className='add'><ArrowBack onClick={()=>setKey('none')}/><h4>Contacts</h4></div>
-        <div className='tag'>Please add more company's email & contacts</div>
-        <div><h5>Email ID</h5></div>
-        <div><input type='text' name='email' placeholder='eg:salestream@bt.in' onChange={(e)=>setMail(e.target.value)}/></div><br/>
-        <div><button name='email' onClick={addMore}><span>+</span>Add More</button></div>
-        <div><h5>Contact Number</h5></div>
-        <div><input type='text' placeholder='eg:123456789' onChange={(e)=>setPhon(e.target.value)}/></div><br/>
-        <div><button name='phone' onClick={addMore}><span>+</span>Add More</button></div><br/>
-        <div><button className='save' onClick={()=>setKey('none')}>Save</button></div>
-      </div>
+      
       <div className={`${sty}`}>
         <div><div><ArrowBack onClick={()=>setSty('none')}/></div>
         <div className='tag'>Please provide the company's email & contacts</div></div>
             <div className='box'>
               <ul>
                 <li>
-                  <div><h4>Sales Team</h4><Delete className='del'/><Edit className='edit' onClick={()=>{
-                    setSty('none');
-                    setKey('AddContacts');
-                  }}/></div>
+                  <div><h4>Sales Team</h4><Delete className='del'/><Edit className='edit' /></div>
                   <div>{email.map(email=><>{email}/</>)}</div>
                   <div>{phone.map(phone=><>{phone}/</>)}</div>
                 </li>
@@ -133,15 +98,7 @@ if(mail !== ''){
             </div>
       </div>
       <div className={`${editaddress}`}>
-      <div className='add'><ArrowBack onClick={()=>setEditaddress('none')}/>Address</div>
-      <div><input type='text' placeholder='Floor-Number/House-No/Office-Name' name='dno' onChange={changeHandler}/></div>
-      <div><input type='text' placeholder='Area/Locality'name='street' onChange={changeHandler}/></div>
-      <div><input type='text' placeholder='Nearest Landmark' name='landmark' onChange={changeHandler}/></div>
-      <div><input type='text' placeholder='Town/City' name='city' onChange={changeHandler}/></div>
-      <div><input type='text' placeholder='State' name='state' onChange={changeHandler}/></div>
-      <div><input type='text' placeholder='Pincode' name='pin' onChange={changeHandler}/></div><br/>
-      <div><input className='btn' type='button' value='Save' onClick={updateAddress}/></div><br/>
-
+      <ArrowBack onClick={()=>setEditaddress('none')}/>
       </div>
       <div className={`${post}`}>
       <ArrowBack onClick={()=>setPost('none')}/>
@@ -170,17 +127,14 @@ if(mail !== ''){
              <ul> 
                <li>
                  <h4>Contacts<Edit className='edit' onClick={()=>setSty('Contacts')} /></h4>
-                 <label>Email:</label>{email.map(mail=><div>{mail}</div>)}<span className='noOfEmails'>+{email.length+phone.length}</span><br/>
+                 <label>Email:</label>{email.map(mail=><div>{mail}</div>)}<span className='noOfEmails'>+{email.length}</span><br/>
                  <div className='phone'><label>Phone:</label>{phone.map(phone=><>{phone}/</>)}</div>
                </li>
-               <li className='address'><h4>Address<Edit className='edit' onClick={()=>setEditaddress('EditAddress')}/></h4><br/>
+               <li className='address'><h4>Address<Edit className='edit' onClick={()=>setEditaddress('Address')}/></h4><br/>
                {address.dno}<br/>
                {address.street}<br/>
-               {address.landmark}<br/>
                {address.city}<br/>
-               {address.state}<br/>
-               {address.pin}
-
+               {address.state}
                </li>
                <li><h4>Hours of Operations<Edit className='edit'/></h4>
                <p>Monday to Friday:9:00 AM to 6:00 PM</p>
