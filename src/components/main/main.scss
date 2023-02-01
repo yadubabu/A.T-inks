@@ -113,11 +113,22 @@
             height: 100%;
             border:lightgray 2px solid;
             border-radius: 5px;
-            background-color:lightgrey;
+            background-color:white;
             position: absolute;
             display: flex;
             z-index: 9;
-            margin-left: 555px;}
+            margin-left: 555px;
+            div>ul{
+                display: flex;
+                flex-direction: column;
+                .noBob{
+                    display: flex;
+                    button{background-color: white;
+                        color:red;
+                    }
+                }
+            }
+        }
             .EditAddress{
                 width: 300px;
                 height: 100%;

@@ -18,7 +18,7 @@ import ArrowBack from '@mui/icons-material/ArrowBack';
 
 import './main.scss'
 
-const Main = ({email,phone,editAddress,address,addContact}) => {
+const Main = ({email,phone,editAddress,address,addContact,statement,addPost}) => {
   const [sty,setSty]=useState('none');
   const [editaddress,setEditaddress]=useState('none');
   const [post,setPost]=useState('none');
@@ -30,14 +30,9 @@ const [terms,setTerms]=useState('noprivacy');
 const [key,setKey]=useState('none');
 const [mail,setMail]=useState('');
 const [phon,setPhon]=useState('');
-const [reference,setReference]=useState({
-  // dno:'',
-  // street:'',
-  // landmark:'',
-  // city:'',
-  // state:'',
-  // pin:''
-});
+const [reference,setReference]=useState({});
+
+console.log(statement);
 const changeHandler=(e)=>{
   setReference({...reference,[e.target.name]:e.target.value})
 }
@@ -46,6 +41,7 @@ const updateAddress=(e)=>{
   if(reference !== ''){
 
     editAddress(reference)
+    setEditaddress('none');
   }
 }
 const showDisplay=(id)=>{
@@ -150,7 +146,14 @@ if(mail !== ''){
 
       </div>
       <div className={`${post}`}>
-      <ArrowBack onClick={()=>setPost('none')}/>
+      <div><ArrowBack onClick={()=>setPost('none')}/></div>
+      <div className='state'>
+              <ul>
+                <li className='noBob'><h4>Statement</h4><button>&copy;Add</button></li>
+                <li></li>
+                </ul>
+                <button>Save</button>
+            </div>
       </div>
       <ul>
         <li><h3>About Us</h3></li>

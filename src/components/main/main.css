@@ -107,11 +107,22 @@
   height: 100%;
   border: lightgray 2px solid;
   border-radius: 5px;
-  background-color: lightgrey;
+  background-color: white;
   position: absolute;
   display: flex;
   z-index: 9;
   margin-left: 555px;
+}
+.mainpart .Post div > ul {
+  display: flex;
+  flex-direction: column;
+}
+.mainpart .Post div > ul .noBob {
+  display: flex;
+}
+.mainpart .Post div > ul .noBob button {
+  background-color: white;
+  color: red;
 }
 .mainpart .EditAddress {
   width: 300px;

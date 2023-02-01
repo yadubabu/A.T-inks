@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/header/Header";
 import SideBar from "./components/sidebar/SideBar";
-import Main from "./components/main/Main";
+import Main from "./components/test/Main";
 import "./app.scss";
 import Info from "./components/Info";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -11,10 +11,12 @@ import Privacy from "./components/Privacy";
 import FandQ from "./components/FandQ";
 
 const App = () => {
-  const [contacts, setContacts] = useState({
-    email: ["abcd@gmail.com", "pqrs@gmail.com"],
-    phone: [12345678, 987654321],
-  });
+  const [contacts, setContacts] = useState([
+    {
+      email: ["abcd@gmail.com", "pqrs@gmail.com"],
+      phone: [12345678, 987654321],
+    },
+  ]);
   const [address, setAddress] = useState({
     dno: "1-20/1",
     street: "Maadhapur",
@@ -33,10 +35,11 @@ const App = () => {
       "This type of essay focuses on your unique experiences, ideas, or beliefs that may not be discussed throughout the rest of your application.",
     ],
   });
-  const addContact = (data) => {
-    console.log(data.email);
-    contacts.email.push(data.email);
-    contacts.phone.push(data.phone);
+  const addPost = (data) => {
+    setStatement.push(data);
+  };
+  const addContacts = (data) => {
+    setContacts(data);
   };
   return (
     <div>
@@ -45,11 +48,14 @@ const App = () => {
         <SideBar className="side" />
         <Main
           className="mainBody"
-          email={contacts.email}
-          phone={contacts.phone}
+          // email={contacts.email}
+          // phone={contacts.phone}
+          contacts={contacts}
           editAddress={editAddress}
           address={address}
-          addContact={addContact}
+          addPost={addPost}
+          statement={statement}
+          setContacts={setContacts}
         />
       </div>
     </div>
