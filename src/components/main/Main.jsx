@@ -31,19 +31,22 @@ const [key,setKey]=useState('none');
 const [mail,setMail]=useState('');
 const [phon,setPhon]=useState('');
 const [reference,setReference]=useState({
-  dno:'',
-  street:'',
-  landmark:'',
-  city:'',
-  state:'',
-  pin:''
+  // dno:'',
+  // street:'',
+  // landmark:'',
+  // city:'',
+  // state:'',
+  // pin:''
 });
 const changeHandler=(e)=>{
-  setReference({[e.target.name]:e.target.value})
+  setReference({...reference,[e.target.name]:e.target.value})
 }
 const updateAddress=(e)=>{
   e.preventDefault();
-  editAddress(reference);
+  if(reference !== ''){
+
+    editAddress(reference)
+  }
 }
 const showDisplay=(id)=>{
  
@@ -92,8 +95,11 @@ if(mail !== ''){
   addContact({[e.target.name]:phon})
 }
 }
+
   return (
     <div className='mainpart'>
+      {/* {reference !== '' ? address===reference:address} */}
+      
       <div className={`${key}`}>
         <div className='add'><ArrowBack onClick={()=>setKey('none')}/><h4>Contacts</h4></div>
         <div className='tag'>Please add more company's email & contacts</div>

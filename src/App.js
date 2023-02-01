@@ -24,8 +24,8 @@ const App = () => {
     pin: "530001",
   });
   const editAddress = (data) => {
-    // console.log(data);
-    setAddress({ data });
+    console.log(data);
+    setAddress(data);
   };
   const [statement, setStatement] = useState({
     posts: [
