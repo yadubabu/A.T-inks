@@ -1,0 +1,239 @@
+
+.fandq{
+    border: 1px lightgray solid;
+    border-radius: 5px;
+    margin: 0 20px;
+    padding: 10px;
+    h3{
+        text-align: center;
+    }
+}
+.terms{
+    border: 1px lightgray solid;
+    border-radius: 5px;
+    margin: 0 20px;
+    padding: 10px;
+    h3{
+        text-align: center;
+    }
+}
+.feedback{
+    border: 1px lightgray solid;
+    border-radius: 5px;
+    margin: 0 20px;
+    padding: 10px;
+    h3{
+        text-align: center;
+    }
+}
+.privacy{
+    border: 1px lightgray solid;
+    border-radius: 5px;
+    margin: 0 20px;
+    padding: 10px;
+    h3{
+        text-align: center;
+    }
+}
+.info{
+    
+    .block{
+        list-style: none;
+        display: flex;
+        width: auto;
+        li>.social{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px;
+            li{
+                border: none;
+                width: 20px;
+                height: 20px;
+                color: gray;
+                font-size: xx-small;
+                padding-bottom: 10px;
+            }
+        }
+        li>.media{
+            width: 280px;
+        }
+        .phone{
+            display: flex;
+        }
+        li{
+            border: 1px grey solid;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 5px;
+        .state{
+            border:1px solid lightgrey;
+            border-radius: 5px;
+        }
+        .edit{
+            color: red;
+        }
+        h4{
+            display: inline;
+        }
+        ul>li{
+            border: none;
+            text-align: center;
+            margin-right: 40px;
+        }
+        }
+    }
+}
+.add{
+    width:300px;
+    height:100%;
+    border: 2px gray solid;
+    color:black;
+    position: absolute;
+    margin-left: 400px;
+    border-radius: 5px;
+    right: -60;
+    background-color: white;
+    
+    ul{
+        list-style: none;
+        border-radius: 5px;
+        
+    }
+}
+.post{
+    width:250px;
+    height:100%;
+    border: 1px gray solid;
+    color:black;
+    position: absolute;
+    margin-left: 400px;
+    border-radius: 5px;
+    background-color: white;
+    textarea{
+        width: 200px;
+        height: 150px;
+    }
+    button{
+        color:white;
+        background-color:tomato;
+        border:none;
+    }
+
+}
+.addContacts{
+    width:300px;
+    height:100%;
+    color:black;
+    position: absolute;
+    margin-left: 400px;
+    border-radius: 5px;
+    right: -60;
+    background-color: white;
+}
+    .editContacts{
+        width:300px;
+        height:100%;
+        color:black;
+        position: absolute;
+        margin-left: 400px;
+        border-radius: 5px;
+        right: -60;
+        background-color: white;
+    }
+    .head{
+        ul{
+            list-style: none;
+        .cap{
+                margin-bottom: 40px;
+                
+            }
+            img{
+                width: 50px;
+                height: 50px;
+            }
+            li>div{
+                display: flex;
+                h4{
+                    color: red;
+                    margin-left: 30px;
+                    font-size: large;
+                }
+                p{
+                    color: lightblue;
+                    padding-left: 80px;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+.contact{
+    border:lightgrey solid 1px;
+    width:300px;
+    height:80vh;
+    color:black;
+    position: absolute;
+    margin-left: 400px;
+    border-radius: 5px;
+    right: -60;
+    background-color: white;
+    padding: 20px;
+    .save{
+        color:white;
+        background-color: tomato;
+        width: 280px;
+        border: none;
+        border-radius: 5px;
+        margin-left: 8px;
+    }
+    h5{
+        display: inline;
+    }
+    .edit,.del{
+        color:red;
+        background-color: white;
+        border: none;
+        margin-bottom: 10px;
+        margin-left: 80px;
+    }
+    .data>div{
+        border:black 2px solid;
+        margin: 5px;
+        border-radius: 5px;
+          
+    }
+        .sales{
+        border:grey 2px solid;
+        margin: 5px;
+        border-radius: 5px;
+          
+    }
+    
+    .arrow{
+        padding: 5px;
+    }
+}
+
+.none{
+    display: none;
+}
+
+.nav>ul{
+    list-style: none;
+    display: flex;
+    // justify-content:left;
+    // align-items:center;
+    justify-content: space-around;
+    padding-left: -120px;
+    cursor: pointer;
+    li:first-child{
+        color: red;
+        text-decoration: underline;
+    }
+}
+.address{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+   
+}
